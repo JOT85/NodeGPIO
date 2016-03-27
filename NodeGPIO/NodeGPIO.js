@@ -34,8 +34,25 @@ module.exports = {
 	
 	"setup" : function (IO,IOQ) {
 		
-		GPIOset.setups[String(IO)] = IOQ ;
-		return IOQ ;
+		if (typeof IO === "object") {
+			
+			doing = 0 ;
+			while (doing !== IO.length) {
+				
+				GPIOset.setups[String(IO[doing])] = IOQ ;
+				doing++ ;
+				
+			}
+			return true ;
+			
+		}
+		
+		else {
+			
+			GPIOset.setups[String(IO)] = IOQ ;
+			return IOQ ;
+			
+		}
 		
 	} ,
 	
@@ -116,7 +133,7 @@ module.exports = {
 		
 		if (repeat === true) {
 			
-			this.wait(pin,listenFor,() => {
+			this.when(pin,listenFor,() => {
 				
 				this.onchange(pin,doFunction,repeat) ;
 				doFunction(listenFor) ;
@@ -127,7 +144,7 @@ module.exports = {
 		
 		else {
 			
-			this.wait(pin,listenFor,()=>{doFunction(listenFor);}) ;
+			this.when(pin,listenFor,()=>{doFunction(listenFor);}) ;
 			
 		}
 		
