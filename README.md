@@ -12,7 +12,7 @@ This enables you to use the Raspberry Pis GPIO ports in NodeJS.
 <li>GPIO.setmode(mode) - Can be GPIO.BOARD or GPIO.BCM - Sets the pin numbering system - Read more <a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/">here</a></li>
 <!--<li>GPIO.getmode() - Coming soon</li>-->
 <li>GPIO.setwarnngs()</li>
-<li>GPIO.setup(channel,GPIO.IN/GPIO.OUT) - Sets up the specified chanel as an input or an output - Multiple chanel setup is not yet supported - Read more <a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/">here</a></li>
+<li>GPIO.setup(channel,GPIO.IN/GPIO.OUT) - Sets up the specified chanel as an input or an output - Read more <a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/">here</a></li>
 <li>GPIO.input(channel) - Returns 1 (of input it high) or 0 (if input is low) - Read more <a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/">here</a></li>
 <li>GPIO.cleanup() - Coming soon</li>
 <li>Board infomation - Coming soon</li>
