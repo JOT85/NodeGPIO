@@ -2,11 +2,10 @@
 Raspberry PI GPIO in Node.js
 <br><br>
 This enables you to use the Raspberry Pi's GPIO ports in Node.js.
-
-<br>It is still being updated & is not done yet, but should work stablally.
-<br><br>
-To use:<br>
+<br>
+A quick example:<br>
 <code>
+	
 	let GPIO = require("./NodeGPIO.js") ;
 	//This will setup GPIO21 as a input.
 	let myInput = new GPIO(21,"in") ;
