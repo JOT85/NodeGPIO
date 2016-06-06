@@ -7,24 +7,24 @@ This enables you to use the Raspberry Pi's GPIO ports in Node.js.
 <br><br>
 To use:<br>
 <code>
-let GPIO = require("./NodeGPIO.js") ;
-//This will setup GPIO21 as a input.
-let myInput = new GPIO(21,"in") ;
-//This will setup GPIO20 as an output.
-let myOutput = new GPIO(20,"out") ;
+	let GPIO = require("./NodeGPIO.js") ;
+	//This will setup GPIO21 as a input.
+	let myInput = new GPIO(21,"in") ;
+	//This will setup GPIO20 as an output.
+	let myOutput = new GPIO(20,"out") ;
 
-//Get the input value of the input we set up earlier.
-let myInputValue = myInput.input() ; //This will be either 0 or 1
+	//Get the input value of the input we set up earlier.
+	let myInputValue = myInput.input() ; //This will be either 0 or 1
 
-//This will output a high signal to output 20
-myOutput.output(1) ;
+	//This will output a high signal to output 20
+	myOutput.output(1) ;
 
-//This will wait for 5 seconds
-require("child_process").execSync("sleep 5") ;
+	//This will wait for 5 seconds
+	require("child_process").execSync("sleep 5") ;
 
-//We must unexport the GPIO, if we do not, then we will not be able to use them again after we close this programme unless we reboot the system...
-myInput.unexport() ;
-myOutput.unexport() ;
+	//We must unexport the GPIO, if we do not, then we will not be able to use them again after we close this programme unless we reboot the system...
+	myInput.unexport() ;
+	myOutput.unexport() ;
 </code>
 <!--
 <br>I have tried to add all of the fetured however it is not yet done yet. Here is what I have so far:
